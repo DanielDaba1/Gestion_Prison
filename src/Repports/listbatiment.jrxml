@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cbf7fdd9-8c62-4c65-a863-39d8516c8eb1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM batiment]]>
+	</queryString>
+	<field name="ID_Batiment" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Designation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NombreCellule" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date_de_construction" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="154" splitType="Stretch">
+			<image>
+				<reportElement x="417" y="0" width="138" height="109" uuid="ff32a28b-46b2-438b-83bb-d0e9e8ef4700"/>
+				<imageExpression><![CDATA["D:\\Mes Projets\\desk\\Gestion_prison\\src\\View\\B.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="138" height="109" uuid="c82a4cab-ca96-4efb-817f-4aef5ab8018e"/>
+				<imageExpression><![CDATA["D:\\Mes Projets\\desk\\Gestion_prison\\src\\View\\B.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="138" y="9" width="276" height="20" uuid="75d93945-3121-4137-9c28-5691a994a299"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPUBLIQUE DEMOCRATIQUE DU CONGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="29" width="276" height="20" uuid="8b1805c9-8939-448c-ae7b-3412524c595d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROVINCE DU NORD-KIVU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="49" width="276" height="20" uuid="e732e357-217a-452f-b882-cd3fa1202a63"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRISON CENTRALE DE GOMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="89" width="276" height="20" uuid="15287008-8824-4c35-81fb-28e89020caf8"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTE DES BATIMENTS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="115" width="552" height="25" uuid="c1fa745e-bf3d-4bd9-86d3-56f818aead43"/>
+				<imageExpression><![CDATA["D:\\Mes Projets\\desk\\Gestion_prison\\src\\View\\bande2.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="2" uuid="0af67967-604a-4f86-9f36-8129a470b183"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="138" height="15" uuid="6ae601ef-89db-428c-b6d8-41265174a8d3"/>
+				<text><![CDATA[NUMERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="19" width="138" height="15" uuid="ddfa5e39-c673-4f95-a933-7026a08e0e4b"/>
+				<text><![CDATA[NOM BATIMENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="138" height="15" uuid="de88c1c8-54f9-4118-a16e-5687d2f64354"/>
+				<text><![CDATA[NOMBRE DE CELULLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="19" width="138" height="15" uuid="ac7ecc06-2337-4950-9e54-f83d6b8a56e3"/>
+				<text><![CDATA[DATE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="138" height="15" uuid="efc266b2-19e0-4795-96b2-ee83eef47f3b"/>
+				<textFieldExpression><![CDATA[$F{ID_Batiment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="138" y="0" width="138" height="15" uuid="10183b48-6913-498b-a0ac-6334c3c0f7d0"/>
+				<textFieldExpression><![CDATA[$F{Designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="138" height="15" uuid="697d46aa-044a-4976-9e83-13b69b6036bf"/>
+				<textFieldExpression><![CDATA[$F{NombreCellule}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="414" y="0" width="138" height="15" uuid="d4fdbbe3-9063-4ad5-9a22-41082f6bd490"/>
+				<textFieldExpression><![CDATA[$F{Date_de_construction}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="9660fb20-6664-4789-bc1f-c36864d491e1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="1f96e54a-9fba-44ab-840e-cd0f36bf3378"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="1099fc0c-ca31-497e-8e26-eb9b191d0b9d"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="ded945af-d524-42cd-825d-22a206d19d89"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
